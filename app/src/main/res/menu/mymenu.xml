@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <item
+        android:id="@+id/action_myqr"
+        android:title="My QR"
+        android:icon="@drawable/qr"
+        app:showAsAction="always"
+         />
+
+    <item
+        android:id="@+id/action_emergency_hotlines"
+        android:icon="@drawable/hicall"
+        android:title="contact"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_message"
+        android:icon="@drawable/mail3"
+        android:title="contact"
+        app:showAsAction="always" />
+
+    <!--<item
+        android:id="@+id/action_about"
+        android:title="about"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/settings"
+        android:orderInCategory="100"
+        android:title="settings"
+        app:showAsAction="never" />-->
+
+</menu>

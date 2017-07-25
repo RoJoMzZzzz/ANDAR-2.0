@@ -1,0 +1,141 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.research.andrade.andar.Emergency"
+    tools:ignore="uselessParent"
+    android:background="?attr/colorButtonNormal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#fff"
+            android:divider="?android:attr/dividerHorizontal"
+            android:showDividers="middle"
+            android:stretchColumns="*"
+            android:padding="10dp"
+            android:layout_margin="10dp">
+
+            <Button
+                android:drawableStart="@drawable/redqr"
+                android:drawableLeft="@drawable/redqr"
+                android:drawablePadding="10dp"
+                android:padding="5dp"
+                android:text="@string/MyQrCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnQRCode"
+                android:background="@android:color/transparent"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:layout_gravity="start"
+                />
+
+            <Button
+                android:drawableStart="@drawable/sms2"
+                android:drawableLeft="@drawable/sms2"
+                android:drawablePadding="10dp"
+                android:padding="5dp"
+                android:text="@string/MessageContacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnMessage"
+                android:background="@android:color/transparent"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:layout_gravity="start"
+
+                />
+
+            <Button
+                android:id="@+id/btnContacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/EmergencyContacts"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:layout_gravity="start"
+                android:padding="5dp"
+                android:drawableStart="@drawable/contact"
+                android:drawableLeft="@drawable/contact"
+                android:drawablePadding="10dp"
+                />
+
+            <Button
+                android:id="@+id/btnCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Emergency Hotlines"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:layout_gravity="start"
+                android:padding="5dp"
+                android:drawableStart="@drawable/call"
+                android:drawableLeft="@drawable/call"
+                android:drawablePadding="10dp"
+                />
+
+            <Switch
+                android:id="@+id/swtSavingMove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:text="@string/BatterySavingMode"
+                android:visibility="gone" />
+
+
+            <Switch
+                android:text="@string/Flashlight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/swtFlashlight"
+                android:padding="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"/>
+
+            <Switch
+                android:text="@string/StrobeFlashlight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/swtStrobe"
+                android:padding="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"/>
+
+            <Switch
+                android:text="@string/ScreenFlashlight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/swtScreenFlash"
+                android:padding="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"/>
+
+            <Switch
+                android:text="@string/Alarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/swtAlarm"
+                android:padding="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</android.support.v4.widget.NestedScrollView>

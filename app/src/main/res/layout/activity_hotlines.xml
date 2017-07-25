@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_hotlines"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.research.andrade.andar.Hotlines">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="Local Hotlines (Poblacion - Pateros)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:layout_margin="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="Police"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:layout_weight="1"
+                     />
+
+                <Button
+                    android:text="6428235"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnLocPolice"
+                    android:layout_weight="1"
+                    android:layout_width="300dp"
+                      />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+            <TextView
+                android:text="Fire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView13"
+                android:layout_weight="1"
+                 />
+
+            <Button
+                android:text="6411365"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLocFire"
+                android:layout_weight="1"
+                  />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+            <TextView
+                android:text="Rescue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView14"
+                android:layout_weight="1"
+                 />
+
+            <Button
+                android:text="6425159"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLocRescue"
+                android:layout_weight="1"
+                  />
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+            <TextView
+                android:text="Barangay Poblacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView15"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:text="6415502"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnPoblacion"
+                android:layout_weight="1"
+                  />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Nearby Fire Departments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView11"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="Bonifacio Fire Department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView125"
+                    android:layout_weight="1"
+                    />
+
+                <Button
+                    android:text="4946667"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnFireBonifacio"
+                    android:layout_weight="1"
+                      />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+
+                <TextView
+                    android:text="Taguig Fire Department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTaguig"
+                    android:layout_weight="1"
+                    />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_width="150dp">
+
+                    <Button
+                        android:text="8370704"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnFireTaguig1"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                         />
+
+                    <Button
+                        android:text="5423695"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnFireTaguig2"
+                        android:layout_weight="1"
+                         />
+
+                    <Button
+                        android:text="8374496"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnFireTaguig3"
+                        android:layout_weight="1"
+                         />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="Makati Fire Department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtMakatiFire"
+                    android:layout_weight="1"
+                    />
+
+                <Button
+                    android:text="8185150"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnFireMakati"
+                    android:layout_weight="1"
+                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="Pasig Fire Department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPasigFire"
+                    android:layout_weight="1"
+                    />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_width="150dp">
+
+                <Button
+                    android:text="6411939"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnFirePasig1"
+                    android:layout_weight="1"
+                     />
+
+                    <Button
+                        android:text="6412815"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnFirePasig2"
+                        android:layout_weight="1"
+                         />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="Pasay Fire Department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPasayFire"
+                    android:layout_weight="1"
+                    />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_width="150dp">
+
+                    <Button
+                        android:text="8442120"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnFirePasay1"
+                        android:layout_weight="1"
+                         />
+
+                    <Button
+                        android:text="8436523"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnFirePasay2"
+                        android:layout_weight="1"
+                         />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:text="NCR Hotlines"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtNCRHotlines"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="NDRRMC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNDRRMC"
+                    android:layout_weight="1"
+                    />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_width="150dp">
+
+                    <Button
+                        android:text="(02) 9111406"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnNdrrmc1"
+                        android:layout_weight="1"
+                         />
+
+                    <Button
+                        android:text="(02) 9122665"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnNdrrmc2"
+                        android:layout_weight="1"
+                         />
+
+                    <Button
+                        android:text="(02) 9125668"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnNdrrmc3"
+                        android:layout_weight="1"
+                         />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="Bureau of Fire Protection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtBfp"
+                    android:layout_weight="1"
+                    />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_width="150dp">
+
+                    <Button
+                        android:text="(02) 7295166"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnBfp1"
+                        android:layout_weight="1"
+                         />
+
+                    <Button
+                        android:text="(02) 4106254"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnBfp2"
+                        android:layout_weight="1"
+                         />
+
+                    <Button
+                        android:text="(02) 4318859"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnBfp3"
+                        android:layout_weight="1"
+                         />
+
+                    <Button
+                        android:text="(02) 4071230"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnBfp4"
+                        android:layout_weight="1"
+                         />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="PNP Hotline Patrol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPnpHotline"
+                    android:layout_weight="1"
+                    />
+
+                <Button
+                    android:text="117"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnPnpHotlinePatrol"
+                    android:layout_weight="1"
+                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="DOTC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDotc"
+                    android:layout_weight="1"
+                    />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_width="150dp">
+
+                    <Button
+                        android:text="7890"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnDotc1"
+                        android:layout_weight="1"
+                         />
+
+                    <Button
+                        android:text="09188848484"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnDotc2"
+                        android:layout_weight="1"
+                         />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="MMDA Metrobase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtMmmdaMetrobase"
+                    android:layout_weight="1"
+                    />
+
+                <Button
+                    android:text="8185150"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnMmdaMetrobase"
+                    android:layout_weight="1"
+                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="MMDA Flood Control"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtMmmdaFlood"
+                    android:layout_weight="1"
+                    />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_width="150dp">
+
+                <Button
+                    android:text="8824177"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnMmdaFlood1"
+                    android:layout_weight="1"
+                     />
+
+                <Button
+                    android:text="8820925"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnMmdaFlood2"
+                    android:layout_weight="1"
+                     />
+
+            </LinearLayout>
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="DPWH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDpwh"
+                    android:layout_weight="1"
+                    />
+
+                <Button
+                    android:text="(02) 3043713"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnDpwh"
+                    android:layout_weight="1"
+                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="Red Cross"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtRedCross"
+                    android:layout_weight="1"
+                    />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_width="150dp">
+
+                    <Button
+                        android:text="143"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnRedCross1"
+                        android:layout_weight="1"
+                         />
+
+                    <Button
+                        android:text="(02) 9111876"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnRedCross2"
+                        android:layout_weight="1"
+                         />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="PAGASA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPagasa"
+                    android:layout_weight="1"
+                    />
+
+                <Button
+                    android:text="(02) 4338526"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnPagasa"
+                    android:layout_weight="1"
+                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="Philippine Coast Guard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPhCoast"
+                    android:layout_weight="1"
+                    />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_width="150dp">
+
+                    <Button
+                        android:text="(02) 5273877"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnPhCoast1"
+                        android:layout_weight="1"
+                         />
+
+                    <Button
+                        android:text="(02) 5278481"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnPhCoast2"
+                        android:layout_weight="1"
+                         />
+
+                    <Button
+                        android:text="09177243682"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnPhCoast3"
+                        android:layout_weight="1"
+                         />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:text="DOH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDoh"
+                    android:layout_weight="1"
+                    />
+
+                <Button
+                    android:text="7111001"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnDoh"
+                    android:layout_weight="1"
+                     />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

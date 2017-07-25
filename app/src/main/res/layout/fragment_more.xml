@@ -1,0 +1,132 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/colorButtonNormal"
+    tools:context="com.research.andrade.andar.More"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:fitsSystemWindows="true"
+    tools:ignore="uselessParent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/background_light"
+            android:showDividers="middle"
+            android:divider="?android:attr/dividerHorizontal"
+            android:stretchColumns="*"
+            android:padding="10dp"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:id="@+id/btnTracker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/Tracker"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:layout_gravity="start"
+                android:padding="5dp"
+                />
+
+                <Button
+                    android:id="@+id/btnQrCodeScanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="@string/QRCodeScanner"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnMessageLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="@string/MessageLog"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnCallLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="@string/CallLogs"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    />
+
+
+                <Button
+                    android:id="@+id/btnRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="Rate this App"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnReferences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="Resources"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="@string/AboutUs"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnExit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="@string/Exit"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.NestedScrollView>

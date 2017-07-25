@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_splash_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.research.andrade.andar.SplashScreen"
+    android:background="@android:color/darker_gray">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp" />
+
+    <TextView
+        android:text="ALERT RESPONSE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtAlert"
+        android:textSize="18sp"
+        android:layout_above="@+id/progressBar2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp" />
+
+    <TextView
+        android:text="NATURAL DISASTER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/txtNatural"
+        android:textSize="18sp"
+        android:layout_above="@+id/txtAlert"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="ANDROID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtAndroid"
+        android:textSize="18sp"
+        android:layout_above="@+id/txtNatural"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/andarlogo1"
+        android:id="@+id/imageView"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:cropToPadding="false"
+        android:layout_above="@+id/txtAndroid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp" />
+
+</RelativeLayout>

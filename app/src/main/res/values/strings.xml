@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">ANDAR</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="BatterySavingMode">Battery Saving Mode</string>
+    <string name="Flashlight">Flashlight</string>
+    <string name="ScreenFlashlight">Screen as Flashlight</string>
+    <string name="StrobeFlashlight">Strobe Flashlight</string>
+    <string name="Alarm">Alarm</string>
+    <string name="MessageContacts">  Message Contacts</string>
+    <string name="EmergencyContacts">Emergency Contacts</string>
+    <string name="CallAuthority">Call Authority</string>
+    <string name="Tracker">Tracker</string>
+    <string name="MessageLog">Message Logs</string>
+    <string name="CallLogs">Call Logs</string>
+    <string name="WeatherLog">Weather Logs</string>
+    <string name="References">References</string>
+    <string name="AboutUs">About Us</string>
+    <string name="Exit">Exit</string>
+    <string name="Earthquake">Earthquake</string>
+    <string name="Flood">Flood</string>
+    <string name="Typhoon">Typhoon</string>
+    <string name="Volcano">Volcano</string>
+    <string name="Fire">Fire</string>
+    <string name="Landslide">Landslide</string>
+    <string name="Tsunami">Tsunami</string>
+    <string name="Immediately">I need HELP IMMEDIATELY</string>
+    <string name="Possible">I\'m Ok, but need help when possible</string>
+    <string name="Okay">I\'m Ok</string>
+    <string name="QRCodeScanner">QR Code Scanner</string>
+    <string name="MyQrCode">My QR Code</string>
+    <string name="CreateNewQR">Create New QR Code</string>
+    <string name="AddNewEmCont">Add New Emergency Contact</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string-array name="send">
+        <item>Barangay Poblacion</item>
+        <item>Emergency Contacts</item>
+        <item>Both</item>
+    </string-array>
+
+    <string-array name="loc">
+        <item>C. Almeda St.</item>
+        <item>A. Mabini St.</item>
+        <item>G. Flores St.</item>
+        <item>P. Tangco St.</item>
+        <item>J. Rizal St.</item>
+        <item>P. Herrera St.</item>
+        <item>B. Morcilla St.</item>
+        <item>S. Tuazon  St. - 1st Block</item>
+        <item>S. Tuazon  St. - 2nd Block</item>
+        <item>S. Tuazon  St. - 3rd Block</item>
+    </string-array>
+
+    <string-array name="ass">
+        <item>Earthquake</item>
+        <item>Fire</item>
+        <item>Flood</item>
+        <item>Landslide</item>
+        <item>Tsunami</item>
+        <item>Typhoon</item>
+        <item>Volcano</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="local">
+        <item>Police</item>
+        <item>Fire</item>
+        <item>Rescue</item>
+        <item>Barangay Poblacion</item>
+    </string-array>
+
+    <string-array name="nearby">
+        <item>Bonifacio Fire Department</item>
+        <item>Taguig Fire Department</item>
+        <item>Makati Fire Department</item>
+        <item>Pasig Fire Department</item>
+        <item>Pasay Fire Department</item>
+    </string-array>
+
+    <string-array name="ncr">
+        <item>NDRRMC</item>
+        <item>Bureau of Fire Protection</item>
+        <item>PNP Hotline Patrol</item>
+        <item>DOTC</item>
+        <item>MMDA Metrobase</item>
+        <item>MMDA Flood Control</item>
+        <item>DPWH</item>
+        <item>Red Cross</item>
+        <item>PAGASA</item>
+        <item>Philippine Coast Guard</item>
+        <item>DOH</item>
+    </string-array>
+
+</resources>
