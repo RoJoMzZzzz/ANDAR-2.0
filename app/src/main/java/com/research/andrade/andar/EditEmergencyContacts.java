@@ -1,6 +1,8 @@
 package com.research.andrade.andar;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -91,14 +93,34 @@ public class EditEmergencyContacts extends AppCompatActivity {
         delBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Integer isDelete=db.deleteDataEmCont(contNumEdt.getText().toString());
-                if (isDelete>0){
-                    Toast.makeText(EditEmergencyContacts.this, "Deleted", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(EditEmergencyContacts.this,EmergencyContacts.class));
-                }
-                else {
-                    Toast.makeText(EditEmergencyContacts.this, "Not Deleted", Toast.LENGTH_SHORT).show();
-                }
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(EditEmergencyContacts.this);
+                alertDialogBuilder
+                        .setMessage("Are you sure you want to delete this emergency contact?")
+                        .setCancelable(false)
+                        .setNegativeButton("No",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                dialog.cancel();
+                            }
+                        })
+                        .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                Integer isDelete=db.deleteDataEmCont(contNumEdt.getText().toString());
+                                if (isDelete>0){
+                                    Toast.makeText(EditEmergencyContacts.this, "Deleted", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(EditEmergencyContacts.this,EmergencyContacts.class));
+                                }
+                                else {
+                                    Toast.makeText(EditEmergencyContacts.this, "Not Deleted", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.setTitle("Deleting Contact");
+                alertDialog.show();
+
+
             }
         });
 

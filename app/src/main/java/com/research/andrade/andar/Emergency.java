@@ -1,12 +1,15 @@
 package com.research.andrade.andar;
 
 import android.annotation.SuppressLint;
+import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
@@ -21,6 +24,7 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import java.io.IOException;
 import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 
@@ -174,7 +178,7 @@ public class Emergency extends Fragment {
     }
 
 
-    private void MaxBright(){
+    private void MaxBright() {
         try {
             //sets manual mode and brightnes 255
             Settings.System.putInt(getActivity().getContentResolver(), Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);  //this will set the manual mode (set the automatic mode off)
@@ -186,7 +190,22 @@ public class Emergency extends Fragment {
             lp.screenBrightness = (float) br / 255;
             getActivity().getWindow().setAttributes(lp);
 
-        } catch (Exception e) {}
+        } catch (Exception e) {
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (Settings.System.canWrite(getActivity())) {
+                ContentResolver cResolver = this.getActivity().getContentResolver();
+                Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, 255);
+            }
+            else {
+                Intent intent = new Intent(android.provider.Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                intent.setData(Uri.parse("package:" + getActivity().getPackageName()));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        }
+
     }
 
     private void MinBright(){
@@ -201,6 +220,20 @@ public class Emergency extends Fragment {
             getActivity().getWindow().setAttributes(lp);
 
         } catch (Exception e) {}
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (Settings.System.canWrite(getActivity())) {
+                ContentResolver cResolver = this.getActivity().getContentResolver();
+                Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, 0);
+            }
+            else {
+                Intent intent = new Intent(android.provider.Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                intent.setData(Uri.parse("package:" + getActivity().getPackageName()));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        }
+
     }
 
 
@@ -260,6 +293,12 @@ public class Emergency extends Fragment {
             params = camera.getParameters();
             params.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
             camera.setParameters(params);
+            SurfaceTexture dummy = new SurfaceTexture(1);
+            try {
+                camera.setPreviewTexture(dummy);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             camera.startPreview();
             isFlashOn = true;
 
@@ -289,7 +328,7 @@ public class Emergency extends Fragment {
 
     private void blinkFlash() {
 
-        String myString = "0101010101";
+        String myString = "01010101010101010101";
         long blinkDelay = 50; //Delay in ms
         for (int i = 0; i < myString.length(); i++) {
             if (myString.charAt(i) == '0') {

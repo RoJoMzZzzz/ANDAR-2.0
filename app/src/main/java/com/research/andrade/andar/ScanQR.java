@@ -31,7 +31,6 @@ public class ScanQR extends AppCompatActivity implements ZXingScannerView.Result
         builder.setMessage(result.getText());
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
-
         mScannerView.resumeCameraPreview(this);
     }
 

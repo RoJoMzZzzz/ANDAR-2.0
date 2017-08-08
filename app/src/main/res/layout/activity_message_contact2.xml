@@ -27,14 +27,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_margin="10dp"
-            android:layout_marginBottom="50dp"
+            android:orientation="vertical"
             android:weightSum="1">
 
             <LinearLayout
@@ -49,36 +48,33 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:text="Your Name: "
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:id="@+id/textView3"
-                        android:layout_marginTop="10dp" />
-
-                    <TextView
-                        android:text="Send To:"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Your Name: " />
+
+                    <TextView
                         android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="40dp"
-                        />
+                        android:text="Send To:" />
 
                     <TextView
-                        android:text="Location: "
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:id="@+id/textView1"
-                        android:layout_marginTop="35dp"
-                        />
-
-                    <TextView
-                        android:text="Assistance for: "
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView2"
                         android:layout_marginTop="35dp"
+                        android:text="Location: " />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="30dp"
-                        />
+                        android:layout_marginTop="35dp"
+                        android:text="Assistance for: " />
 
                 </LinearLayout>
 
@@ -91,9 +87,8 @@
                         android:id="@+id/edtUserName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/edt_back"
-                        android:hint="Input your name here"
                         android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="Input your name here"
                         android:padding="8dp"
                         android:singleLine="true" />
 
@@ -136,23 +131,26 @@
                 android:padding="8dp"
                 android:visibility="invisible" />
 
-            <Button
-                android:id="@+id/btnSendEm"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
 
-                android:drawableLeft="@android:drawable/ic_menu_send"
-                android:drawablePadding="8dp"
-                android:padding="8dp"
-                android:text="Send Alert Message"
-                android:shadowColor="#545454"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="5" />
 
         </LinearLayout>
     </ScrollView>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnSendEm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="70dp"
+            android:drawableLeft="@android:drawable/ic_menu_send"
+            android:drawablePadding="8dp"
+            android:padding="8dp"
+            android:text="Send Alert Message" />
+    </RelativeLayout>
 </LinearLayout>

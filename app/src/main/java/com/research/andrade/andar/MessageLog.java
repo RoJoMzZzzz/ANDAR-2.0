@@ -33,6 +33,10 @@ public class MessageLog extends AppCompatActivity {
 
         ArrayList<MessageResults> messageResults = GetMessageResults();
 
+        if(messageResults==null){
+            Toast.makeText(MessageLog.this, "You have", Toast.LENGTH_LONG).show();
+        }
+
         lvMessLogs = (ListView) findViewById(R.id.lvMessageLog);
 
         lvMessLogs.setAdapter(new CustomBaseAdapter(this, messageResults));

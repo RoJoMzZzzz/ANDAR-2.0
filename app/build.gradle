@@ -58,6 +58,6 @@ dependencies {
     compile 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
     compile 'me.dm7.barcodescanner:zxing:1.8.4'
     compile 'com.google.android.gms:play-services:10.0.1'
-    compile 'com.android.support.constraint:constraint-layout:+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 }

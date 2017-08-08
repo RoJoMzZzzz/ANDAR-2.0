@@ -56,7 +56,7 @@
 
             <Button
                 android:id="@+id/btnLocal"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
@@ -65,6 +65,7 @@
                 android:drawablePadding="8dp"
                 android:drawableStart="@drawable/call2"
                 android:gravity="center"
+                android:paddingRight="50dp"
                 android:text="Button" />
 
             <TextView
@@ -86,44 +87,47 @@
                 android:popupBackground="#fff" />
 
             <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/btnNearby1"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_margin="10dp"
+                android:layout_weight="1"
                 android:drawableLeft="@drawable/call2"
                 android:drawablePadding="8dp"
                 android:drawableStart="@drawable/call2"
                 android:gravity="center"
 
-                android:layout_gravity="center" />
+                android:paddingRight="50dp"
+                android:text="Button" />
 
             <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/btnNearby2"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_margin="10dp"
+                android:layout_weight="1"
                 android:drawableLeft="@drawable/call2"
                 android:drawablePadding="8dp"
                 android:drawableStart="@drawable/call2"
                 android:gravity="center"
-                android:layout_gravity="center" />
+                android:paddingRight="50dp"
+                android:text="Button" />
 
             <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/btnNearby3"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_margin="10dp"
+                android:layout_weight="1"
                 android:drawableLeft="@drawable/call2"
                 android:drawablePadding="8dp"
                 android:drawableStart="@drawable/call2"
                 android:gravity="center"
-                android:layout_gravity="center" />
+                android:paddingRight="50dp"
+                android:text="Button" />
 
             <TextView
                 android:text="NCR Hotlines"
@@ -144,56 +148,60 @@
                 android:popupBackground="#fff" />
 
             <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/btnNcr1"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_margin="10dp"
+                android:layout_weight="1"
                 android:drawableLeft="@drawable/call2"
                 android:drawablePadding="8dp"
                 android:drawableStart="@drawable/call2"
                 android:gravity="center"
-                android:layout_gravity="center" />
+                android:paddingRight="50dp"
+                android:text="Button" />
 
             <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/btnNcr2"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_margin="10dp"
+                android:layout_weight="1"
                 android:drawableLeft="@drawable/call2"
                 android:drawablePadding="8dp"
                 android:drawableStart="@drawable/call2"
                 android:gravity="center"
-                android:layout_gravity="center" />
+                android:paddingRight="50dp"
+                android:text="Button" />
 
             <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/btnNcr3"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_margin="10dp"
+                android:layout_weight="1"
                 android:drawableLeft="@drawable/call2"
                 android:drawablePadding="8dp"
                 android:drawableStart="@drawable/call2"
                 android:gravity="center"
-                android:layout_gravity="center" />
+                android:paddingRight="50dp"
+                android:text="Button" />
 
             <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/btnNcr4"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_margin="10dp"
+                android:layout_weight="1"
                 android:drawableLeft="@drawable/call2"
                 android:drawablePadding="8dp"
                 android:drawableStart="@drawable/call2"
                 android:gravity="center"
-                android:layout_gravity="center" />
+                android:paddingRight="50dp"
+                android:text="Button" />
 
         </LinearLayout>
         </ScrollView>

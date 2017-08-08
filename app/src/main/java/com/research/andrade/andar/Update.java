@@ -10,8 +10,13 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import com.twitter.sdk.android.core.TwitterCore;
 import com.twitter.sdk.android.tweetui.TweetTimelineListAdapter;
+import com.twitter.sdk.android.tweetui.TweetUi;
 import com.twitter.sdk.android.tweetui.UserTimeline;
+
+import io.fabric.sdk.android.Fabric;
 
 
 /**
@@ -37,6 +42,7 @@ public class Update extends Fragment {
 
         //hanap = (EditText) v.findViewById(R.id.svTweets);
         tweetsLv = (ListView) v.findViewById(R.id.lvTweets);
+
 
         final UserTimeline userTimeline = new UserTimeline.Builder()
                 .screenName("dost_pagasa")

@@ -1,12 +1,18 @@
 package com.research.andrade.andar;
 
+import android.*;
+import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -17,8 +23,14 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import com.twitter.sdk.android.core.TwitterCore;
+import com.twitter.sdk.android.tweetui.TweetUi;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private AppBarLayout appBarLayout;
+    public static final int REQUEST_ID_MULTIPLE_PERMISSIONS = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +47,12 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Prepare");
+        setTitle("Emergency");
 
         appBarLayout = (AppBarLayout)findViewById(R.id.appBar);
 //        appBarLayout.setExpanded(false, true);
+
+
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -49,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                if (position == 0) {
+                if (position == 1) {
                     setTitle("Prepare");
-                } else if (position == 1) {
+                } else if (position == 0) {
                     setTitle("Emergency");
                 } else if (position == 2) {
                     setTitle("Update");
@@ -71,21 +86,25 @@ public class MainActivity extends AppCompatActivity {
 
         setupTabIcons();
 
+        checkAndRequestPermissions();
+        TwitterAuthConfig authConfig =  new TwitterAuthConfig("101cb6b80263147729dc93e0fad2790cdb81c9c8", "f59f0deccfa4372af7413bf3f99b6735966a66fccf9cd63a01dcf26db7cd1c16");
+        Fabric.with(this, new TwitterCore(authConfig), new TweetUi());
+
     }
 
 
 
     private void setupTabIcons() {
         tabLayout.getTabAt(2).setIcon(R.drawable.update2);
-        tabLayout.getTabAt(1).setIcon(R.drawable.emergency);
-        tabLayout.getTabAt(0).setIcon(R.drawable.prepare);
+        tabLayout.getTabAt(0).setIcon(R.drawable.emergency);
+        tabLayout.getTabAt(1).setIcon(R.drawable.prepare);
         tabLayout.getTabAt(3).setIcon(R.drawable.more);
     }
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Prepare(), "Prepare");
         adapter.addFragment(new Emergency(), "Emergency");
+        adapter.addFragment(new Prepare(), "Prepare");
         adapter.addFragment(new Update(), "Update");
         adapter.addFragment(new More(), "More");
         viewPager.setAdapter(adapter);
@@ -179,6 +198,58 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         exitApp();
     }
+
+
+
+    private  boolean checkAndRequestPermissions() {
+        int readcont = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS);
+        int sendsms = ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS);
+        int writesettings = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_SETTINGS);
+        int readphonestate = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE);
+        int readsms = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_SMS);
+        int camera = ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA);
+        int storage = ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int loc = ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION);
+        int loc2 = ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION);
+        List<String> listPermissionsNeeded = new ArrayList<>();
+
+        if (camera != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(android.Manifest.permission.CAMERA);
+        }
+        if (readcont != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(Manifest.permission.READ_CONTACTS);
+        }
+        if (sendsms != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(Manifest.permission.SEND_SMS);
+        }
+        if (writesettings != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(Manifest.permission.WRITE_SETTINGS);
+        }
+        if (readsms != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(Manifest.permission.READ_SMS);
+        }
+        if (readphonestate != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(Manifest.permission.READ_PHONE_STATE);
+        }
+
+        if (storage != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        }
+        if (loc2 != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(android.Manifest.permission.ACCESS_FINE_LOCATION);
+        }
+        if (loc != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(android.Manifest.permission.ACCESS_COARSE_LOCATION);
+        }
+        if (!listPermissionsNeeded.isEmpty())
+        {
+            ActivityCompat.requestPermissions(this,listPermissionsNeeded.toArray
+                    (new String[listPermissionsNeeded.size()]),REQUEST_ID_MULTIPLE_PERMISSIONS);
+            return false;
+        }
+        return true;
+    }
+
 
 
 }

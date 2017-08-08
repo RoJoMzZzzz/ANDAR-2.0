@@ -106,23 +106,23 @@ public class EmergencyHotlines2 extends AppCompatActivity {
                     ncrBtn4.setVisibility(View.GONE);
                     ncrDept="PNP Hotline Patrol";
                 } else if(parent.getItemAtPosition(position).toString().equalsIgnoreCase("DOTC")){
-                    ncrBtn1.setText("7890");
+                    ncrBtn1.setText("(02) 7890");
                     ncrBtn2.setVisibility(View.VISIBLE);
                     ncrBtn3.setVisibility(View.GONE);
                     ncrBtn2.setText("09188848484");
                     ncrBtn4.setVisibility(View.GONE);
                     ncrDept="DOTC";
                 } else if(parent.getItemAtPosition(position).toString().equalsIgnoreCase("MMDA Metrobase")){
-                    ncrBtn1.setText("8185150");
+                    ncrBtn1.setText("(02) 8185150");
                     ncrBtn2.setVisibility(View.GONE);
                     ncrBtn3.setVisibility(View.GONE);
                     ncrBtn4.setVisibility(View.GONE);
                     ncrDept="MMDA Metrobase";
                 } else if(parent.getItemAtPosition(position).toString().equalsIgnoreCase("MMDA Flood Control")){
-                    ncrBtn1.setText("8824177");
+                    ncrBtn1.setText("(02) 8824177");
                     ncrBtn2.setVisibility(View.VISIBLE);
                     ncrBtn3.setVisibility(View.GONE);
-                    ncrBtn2.setText("8820925");
+                    ncrBtn2.setText("(02) 8820925");
                     ncrBtn4.setVisibility(View.GONE);
                     ncrDept="MMDA Flood Control";
                 } else if(parent.getItemAtPosition(position).toString().equalsIgnoreCase("DPWH")){
@@ -153,7 +153,7 @@ public class EmergencyHotlines2 extends AppCompatActivity {
                     ncrBtn4.setVisibility(View.GONE);
                     ncrDept="Philippine Coast Guard";
                 } else if(parent.getItemAtPosition(position).toString().equalsIgnoreCase("DOH")){
-                    ncrBtn1.setText("7111001");
+                    ncrBtn1.setText("(02) 7111001");
                     ncrBtn2.setVisibility(View.GONE);
                     ncrBtn3.setVisibility(View.GONE);
                     ncrBtn4.setVisibility(View.GONE);
@@ -172,31 +172,31 @@ public class EmergencyHotlines2 extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(parent.getItemAtPosition(position).toString().equalsIgnoreCase("Bonifacio Fire Department")){
-                    nearbyBtn1.setText("4946667");
+                    nearbyBtn1.setText("(02) 4946667");
                     nearbyBtn2.setVisibility(View.GONE);
                     nearbyBtn3.setVisibility(View.GONE);
                     nearbyDept="Bonifacio Fire Department";
                 } else if(parent.getItemAtPosition(position).toString().equalsIgnoreCase("Taguig Fire Department")){
-                    nearbyBtn1.setText("8370704");
+                    nearbyBtn1.setText("(02) 8370704");
                     nearbyBtn2.setVisibility(View.VISIBLE);
                     nearbyBtn3.setVisibility(View.VISIBLE);
-                    nearbyBtn2.setText("5423695");
-                    nearbyBtn3.setText("8374496");
+                    nearbyBtn2.setText("(02) 5423695");
+                    nearbyBtn3.setText("(02) 8374496");
                     nearbyDept="Taguig Fire Department";
                 } else if(parent.getItemAtPosition(position).toString().equalsIgnoreCase("Makati Fire Department")){
-                    nearbyBtn1.setText("8185150");
+                    nearbyBtn1.setText("(02) 8185150");
                     nearbyBtn2.setVisibility(View.GONE);
                     nearbyBtn3.setVisibility(View.GONE);
                     nearbyDept="Makati Fire Department";
                 } else if(parent.getItemAtPosition(position).toString().equalsIgnoreCase("Pasig Fire Department")){
-                    nearbyBtn1.setText("6411939");
-                    nearbyBtn2.setText("6412815");
+                    nearbyBtn1.setText("(02) 6411939");
+                    nearbyBtn2.setText("(02) 6412815");
                     nearbyBtn2.setVisibility(View.VISIBLE);
                     nearbyBtn3.setVisibility(View.GONE);
                     nearbyDept="Pasig Fire Department";
                 } else if(parent.getItemAtPosition(position).toString().equalsIgnoreCase("Pasay Fire Department")){
-                    nearbyBtn1.setText("8442120");
-                    nearbyBtn2.setText("8436523");
+                    nearbyBtn1.setText("(02) 8442120");
+                    nearbyBtn2.setText("(02) 8436523");
                     nearbyBtn2.setVisibility(View.VISIBLE);
                     nearbyBtn3.setVisibility(View.GONE);
                     nearbyDept="Pasay Fire Department";
@@ -213,16 +213,16 @@ public class EmergencyHotlines2 extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(parent.getItemAtPosition(position).toString().equalsIgnoreCase("Police")){
-                    localBtn.setText("6428235");
+                    localBtn.setText("(02) 6428235");
                     locDept="Local Police";
                 } else if(parent.getItemAtPosition(position).toString().equalsIgnoreCase("Fire")){
-                    localBtn.setText("6411365");
+                    localBtn.setText("(02) 6411365");
                     locDept="Local Fire";
                 } else if(parent.getItemAtPosition(position).toString().equalsIgnoreCase("Rescue")){
-                    localBtn.setText("6425159");
+                    localBtn.setText("(02) 6425159");
                     locDept="Local Rescue";
                 } else if(parent.getItemAtPosition(position).toString().equalsIgnoreCase("Barangay Poblacion")){
-                    localBtn.setText("6415502");
+                    localBtn.setText("(02) 6415502");
                     locDept="Barangay Poblacion";
                 }
             }

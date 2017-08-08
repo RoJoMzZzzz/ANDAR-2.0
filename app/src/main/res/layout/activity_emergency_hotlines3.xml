@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_hotlines"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.research.andrade.andar.Hotlines">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appBar"
+        android:layout_margin="10dp"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:id="@+id/rdoLocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Local Hotlines" />
+
+        <RadioButton
+            android:id="@+id/rdoFire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="Nearby Fire Departments" />
+
+        <RadioButton
+            android:id="@+id/rdoNcr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="NCR Hotlines" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/radioGroup"
+        android:layout_margin="10dp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/spinner"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="24dp" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/spinner2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <Button
+        android:id="@+id/btnLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner3"
+        android:layout_alignStart="@+id/spinner3"
+        android:layout_below="@+id/spinner3"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/call2"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/call2"
+        android:gravity="center"
+        android:paddingRight="50dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/btnNearby1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/call2"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/call2"
+        android:gravity="center"
+        android:paddingRight="50dp"
+        android:text="Button"
+        android:layout_below="@+id/btnLocal"
+        android:layout_alignLeft="@+id/btnLocal"
+        android:layout_alignStart="@+id/btnLocal"
+        android:layout_alignRight="@+id/btnLocal"
+        android:layout_alignEnd="@+id/btnLocal" />
+
+    <Button
+        android:id="@+id/btnNearby2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/call2"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/call2"
+        android:gravity="center"
+        android:paddingRight="50dp"
+        android:layout_marginRight="10dp"
+        android:text="Button"
+        android:layout_marginTop="52dp"
+        android:layout_below="@+id/btnNearby1"
+        android:layout_alignLeft="@+id/btnNearby3"
+        android:layout_alignStart="@+id/btnNearby3" />
+
+    <Button
+        android:id="@+id/btnNearby3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/call2"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/call2"
+        android:gravity="center"
+        android:paddingRight="50dp"
+        android:text="Button"
+        android:layout_below="@+id/btnNearby1"
+        android:layout_alignLeft="@+id/btnNearby1"
+        android:layout_alignStart="@+id/btnNearby1"
+        android:layout_alignRight="@+id/btnNearby1"
+        android:layout_alignEnd="@+id/btnNearby1" />
+
+
+
+
+</RelativeLayout>

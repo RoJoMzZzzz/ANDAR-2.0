@@ -77,7 +77,8 @@
         <activity android:name=".CallLogs" />
         <activity android:name=".References" />
         <activity android:name=".About" />
-        <activity android:name=".StrobeLightConfig"></activity>
+        <activity android:name=".StrobeLightConfig" />
+        <activity android:name=".EmergencyHotlines3"></activity>
     </application>
 
 </manifest>

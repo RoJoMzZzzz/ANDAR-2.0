@@ -32,30 +32,20 @@
         android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
-        <TextView
-            android:text="Prepare for Natural Disasters"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView6"
-            android:textSize="14sp"
-            android:padding="5dp"
-            android:textStyle="normal|bold"
-            android:layout_marginBottom="10dp" />
-
         <Button
                     android:text="@string/Earthquake"
                     android:drawableStart="@drawable/earthquake"
                     android:drawableLeft="@drawable/earthquake"
-                    android:drawablePadding="25dp"
+                    android:drawablePadding="10dp"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     android:padding="5dp"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/sel"
                     android:scaleType="fitXY"
                     android:id="@+id/btnEarthquake"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+
                     android:layout_marginBottom="10dp" />
 
             <Button
@@ -66,12 +56,12 @@
                 android:id="@+id/btnFire"
                 android:drawableStart="@drawable/fire"
                 android:drawableLeft="@drawable/fire"
-                android:textSize="18sp"
-                android:drawablePadding="25dp"
+
+                android:drawablePadding="10dp"
                 android:textAlignment="textStart"
                 android:layout_gravity="start"
                 android:padding="5dp"
-                android:background="@android:color/transparent"
+                android:background="@drawable/sel"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp" />
 
@@ -86,9 +76,9 @@
                 android:textAlignment="textStart"
                 android:layout_gravity="start"
                 android:padding="5dp"
-                android:background="@android:color/transparent"
-                android:textSize="18sp"
-                android:drawablePadding="25dp"
+                android:background="@drawable/sel"
+
+                android:drawablePadding="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp" />
 
@@ -100,12 +90,12 @@
                 android:id="@+id/btnLandslide"
                 android:drawableStart="@drawable/landslide"
                 android:drawableLeft="@drawable/landslide"
-                android:textSize="18sp"
-                android:drawablePadding="25dp"
+
+                android:drawablePadding="10dp"
                 android:textAlignment="textStart"
                 android:layout_gravity="start"
                 android:padding="5dp"
-                android:background="@android:color/transparent"
+                android:background="@drawable/sel"
 
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp" />
@@ -118,12 +108,12 @@
                 android:id="@+id/btnTsunami"
                 android:drawableStart="@drawable/tsunami"
                 android:drawableLeft="@drawable/tsunami"
-                android:textSize="18sp"
-                android:drawablePadding="25dp"
+
+                android:drawablePadding="10dp"
                 android:textAlignment="textStart"
                 android:layout_gravity="start"
                 android:padding="5dp"
-                android:background="@android:color/transparent"
+                android:background="@drawable/sel"
 
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp" />
@@ -136,12 +126,12 @@
                 android:id="@+id/btnTyphoon"
                 android:drawableStart="@drawable/typhoon"
                 android:drawableLeft="@drawable/typhoon"
-                android:textSize="18sp"
-                android:drawablePadding="25dp"
+
+                android:drawablePadding="10dp"
                 android:textAlignment="textStart"
                 android:layout_gravity="start"
                 android:padding="5dp"
-                android:background="@android:color/transparent"
+                android:background="@drawable/sel"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp" />
 
@@ -153,12 +143,12 @@
                 android:id="@+id/btnVolcano"
                 android:drawableStart="@drawable/volcano"
                 android:drawableLeft="@drawable/volcano"
-                android:textSize="18sp"
-                android:drawablePadding="25dp"
+
+                android:drawablePadding="10dp"
                 android:textAlignment="textStart"
                 android:layout_gravity="start"
                 android:padding="5dp"
-                android:background="@android:color/transparent"
+                android:background="@drawable/sel"
                 android:layout_marginTop="10dp"
                  />
 

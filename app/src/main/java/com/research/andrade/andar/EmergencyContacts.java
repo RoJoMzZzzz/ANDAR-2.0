@@ -139,11 +139,11 @@ public class EmergencyContacts extends AppCompatActivity {
 //                            editText.setText(nameContact+ " "+ cNumber);
                             boolean insCont = db.insertContact(nameContact, cNumber);
                             if(insCont){
-                                Toast.makeText(EmergencyContacts.this, "inserted", Toast.LENGTH_LONG).show();
+                                //Toast.makeText(EmergencyContacts.this, "Inserted", Toast.LENGTH_LONG).show();
                             }
 
                             else{
-                                Toast.makeText(EmergencyContacts.this, "not inserted", Toast.LENGTH_LONG).show();
+                                //Toast.makeText(EmergencyContacts.this, "not inserted", Toast.LENGTH_LONG).show();
                         }
 
                             finish();

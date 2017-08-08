@@ -145,15 +145,16 @@
                 android:layout_marginTop="10dp" />
 
             <TextView
-                android:text="http://stackoverflow.com/"
+                android:id="@+id/txtStackOverFlowRes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtStackOverFlowRes"
-                android:layout_weight="1"
+                android:layout_marginBottom="50dp"
                 android:layout_marginTop="10dp"
+                android:layout_weight="1"
                 android:autoLink="web"
                 android:clickable="true"
-                android:linksClickable="true" />
+                android:linksClickable="true"
+                android:text="http://stackoverflow.com/" />
 
         </LinearLayout>
     </ScrollView>
