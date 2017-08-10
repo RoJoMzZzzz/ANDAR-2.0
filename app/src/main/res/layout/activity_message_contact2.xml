@@ -136,10 +136,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <Button
             android:id="@+id/btnSendEm"
             android:layout_width="match_parent"
@@ -147,10 +143,10 @@
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="0dp"
             android:drawableLeft="@android:drawable/ic_menu_send"
             android:drawablePadding="8dp"
             android:padding="8dp"
             android:text="Send Alert Message" />
-    </RelativeLayout>
+
 </LinearLayout>
